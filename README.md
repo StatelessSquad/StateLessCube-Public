@@ -1,6 +1,6 @@
 # StateLess-Cube — public product page
 
-The marketing page for **StateLess-Cube**, the candy-bright 2048 by
+The marketing page for **StateLess-Cube**, a high pace merge tile game by
 [StateLess Squad](https://github.com/StatelessSquad).
 
 This repository contains **only the product page** — the game itself is not
