@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="color-scheme" content="dark">
+  <title>StateLess-Cube — a candy-bright 2048 by StateLess Squad</title>
+  <meta name="description" content="StateLess-Cube is a candy-bright 2048 with nine icon themes, combo streaks, boosters and a 1000-level ladder. Play it in the browser, get it for iOS and Android.">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="StateLess-Cube — build the StateLess-Cube">
+  <meta property="og:description" content="A candy-bright 2048 with nine themes, combos, boosters and 1000 levels. Developed by StateLess Squad.">
+  <meta property="og:image" content="assets/icon.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/icon.png">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <div class="aurora" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="nav">
+    <div class="wrap">
+      <a class="logo" href="#top">
+        <img src="assets/icon.png" alt="" width="32" height="32">
+        StateLess-Cube
+      </a>
+      <nav class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#themes">Themes</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#download">Get the app</a>
+      </nav>
+      <a class="btn" href="https://github.com/StatelessSquad/StateLessCube-Public">GitHub</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- ================================================================ -->
+    <section class="hero">
+      <div class="wrap">
+        <div class="hero-copy">
+          <span class="eyebrow">🍬 A candy-bright 2048</span>
+          <h1>Build the <span class="grad">StateLess-Cube</span>.</h1>
+          <p class="lede">
+            Merge matching icons, chain combos, charge your booster meter and
+            climb a 1000-level ladder — nine themes deep, from robots to
+            candy. Built for the thumb, tuned for the eye, and finished in one
+            hand.
+          </p>
+          <div class="cta-row">
+            <a class="btn btn-primary btn-lg" href="#demo">▶ Watch it play</a>
+            <a class="btn btn-lg" href="#download">Get the app</a>
+          </div>
+          <ul class="chips">
+            <li>🕹 No ads</li>
+            <li>🔒 No tracking</li>
+            <li>📴 Plays offline</li>
+            <li>🎨 9 themes</li>
+          </ul>
+        </div>
+
+        <div class="hero-media" id="demo">
+          <div class="phone">
+            <span class="notch" aria-hidden="true"></span>
+            <video
+              src="assets/demo.mp4"
+              poster="assets/shots/candy.webp"
+              autoplay muted loop playsinline preload="metadata"
+              aria-label="StateLess-Cube gameplay demo"></video>
+          </div>
+          <div class="float float-1"><b>🎨</b> 9 icon themes</div>
+          <div class="float float-2"><b>🔥</b> Combo streaks</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>🤖 Robots &amp; AI</span><span>🅰️ ABC</span><span>א״ב Hebrew</span>
+        <span>🐻 Animals</span><span>🚀 Space</span><span>🍎 Fruits</span>
+        <span>🍬 Candy</span><span>💠 Prism</span><span>👾 Pixel</span>
+        <span><em>1000 levels</em></span><span>🥇 Ranks</span><span>🔨 Boosters</span>
+        <span>🤖 Robots &amp; AI</span><span>🅰️ ABC</span><span>א״ב Hebrew</span>
+        <span>🐻 Animals</span><span>🚀 Space</span><span>🍎 Fruits</span>
+        <span>🍬 Candy</span><span>💠 Prism</span><span>👾 Pixel</span>
+        <span><em>1000 levels</em></span><span>🥇 Ranks</span><span>🔨 Boosters</span>
+      </div>
+    </div>
+
+    <!-- ================================================================ -->
+    <section>
+      <div class="wrap">
+        <div class="stats">
+          <div class="stat reveal"><b data-count="9">0</b><span>icon themes</span></div>
+          <div class="stat reveal"><b data-count="1000">0</b><span>levels to climb</span></div>
+          <div class="stat reveal"><b data-count="3">0</b><span>boosters to earn</span></div>
+          <div class="stat reveal"><b data-count="0">0</b><span>ads, ever</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================ -->
+    <section id="features">
+      <div class="wrap">
+        <div class="head reveal">
+          <h2>Everything that makes it hard to put down</h2>
+          <p>Small details, tuned until every tap feels like it should pay
+             off. Nothing is bolted on — the whole game is one idea: make the
+             next merge feel better than the last.</p>
+        </div>
+
+        <div class="bento">
+          <article class="card reveal">
+            <span class="ico">🔥</span>
+            <h3>Combo streaks</h3>
+            <p>Merge on consecutive moves and the streak builds. The sound
+               climbs a pentatonic scale, sparks fly, and the board celebrates
+               you.</p>
+          </article>
+
+          <article class="card reveal">
+            <span class="ico">🥇</span>
+            <h3>1000 levels</h3>
+            <p>A ladder from Newbie to Stateless, with ranks, a progress ring
+               and a new goal every few minutes.</p>
+          </article>
+
+          <article class="card reveal">
+            <span class="ico">🥇</span>
+            <h3>Charged boosters</h3>
+            <p>Every merge charges the meter. Fill it and you earn a hammer, a
+               shuffle or a ×2 streak.</p>
+          </article>
+
+          <article class="card wide reveal">
+            <span class="ico">🎨</span>
+            <h3>Nine worlds, one game</h3>
+            <p>Robots &amp; AI, ABC, Hebrew, Animals, Space, Fruits, Candy,
+               Prism and Pixel — each with its own duotone palette, its own
+               icons and its own mood. The rules never change; the feeling
+               always does.</p>
+          </article>
+
+          <article class="card reveal">
+            <span class="ico">🔊</span>
+            <h3>Sound you can feel</h3>
+            <p>Every sound is synthesised live — no audio files, no wait, and
+               it reacts to what you do.</p>
+          </article>
+
+          <article class="card reveal">
+            <span class="ico">📱</span>
+            <h3>Made for thumbs</h3>
+            <p>Swipe, tap, undo. It fits the screen, respects the notch and
+               stays smooth on a phone.</p>
+          </article>
+
+          <article class="card reveal">
+            <span class="ico">✋</span>
+            <h3>One-hand friendly</h3>
+            <p>Undo is always one tap away, and the layout never moves under
+               your thumb.</p>
+          </article>
+
+          <article class="card wide reveal">
+            <span class="ico">🧠</span>
+            <h3>Real 2048 rules</h3>
+            <p>No timers on your score, no energy, no tricks. The numbers add
+               up the way they always did — the fun comes from how it
+               feels, not from what it does to you.</p>
+          </article>
+
+          <article class="card tall reveal">
+            <span class="ico">🌗</span>
+            <h3>Day &amp; night</h3>
+            <p>A warm candy light mode and a deep neon dark mode, following
+               your phone by default and one tap away when you want it
+               otherwise.</p>
+            <p style="margin-top:14px">Everything is rendered on-device.
+               No account, no ads, no analytics, no network calls — your
+               score stays on your phone.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================ -->
+    <section id="themes">
+      <div class="wrap">
+        <div class="head reveal">
+          <h2>Pick your poison</h2>
+          <p>Nine themes, each with its own colour ramp and its own set of
+             icons. Change the mood of the whole game in one tap.</p>
+        </div>
+        <div class="theme-grid">
+          <div class="theme reveal"><span class="dot" style="background:linear-gradient(135deg,#e9e6ff,#7c5cff)">🤖</span><b>Robots &amp; AI</b><span>🤖 🧪 🧠 🗣️</span></div>
+          <div class="theme reveal"><span class="dot" style="background:linear-gradient(135deg,#ffd6e2,#ff8fab)">🅰️</span><b>ABC</b><span>A B C D</span></div>
+          <div class="theme reveal"><span class="dot" style="background:linear-gradient(135deg,#eaf2ff,#0d7fd6)">א״ב</span><b>Hebrew</b><span>א ב ג</span></div>
+          <div class="theme reveal"><span class="dot" style="background:linear-gradient(135deg,#d4f2cd,#3fb96b)">🐻</span><b>Animals</b><span>🐻 🐰 🐱</span></div>
+          <div class="theme reveal"><span class="dot" style="background:linear-gradient(135deg,#e6daff,#5b6cff)">🚀</span><b>Space</b><span>🌙 🌍 ☄️</span></div>
+          <div class="theme reveal"><span class="dot" style="background:linear-gradient(135deg,#ffdada,#ff3d7f)">🍎</span><b>Fruits</b><span>🍎 🍐 🍊</span></div>
+          <div class="theme reveal"><span class="dot" style="background:linear-gradient(135deg,#ffdcf4,#ff3fa4)">🍬</span><b>Candy</b><span>🍬 🍭 🍫</span></div>
+          <div class="theme reveal"><span class="dot" style="background:linear-gradient(135deg,#d4efff,#8b5cf6)">💠</span><b>Prism</b><span>💠 🔷 🔶</span></div>
+          <div class="theme reveal"><span class="dot" style="background:linear-gradient(135deg,#dff7bd,#22c55e)">👾</span><b>Pixel</b><span>🐸 🐢 👾</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================ -->
+    <section id="gallery">
+      <div class="wrap">
+        <div class="head reveal">
+          <h2>Look at it</h2>
+          <p>Real screens, real themes — captured on a phone.</p>
+        </div>
+        <div class="gallery">
+          <figure class="shot reveal"><img src="assets/shots/candy.webp" alt="StateLess-Cube in the Candy theme" loading="lazy" width="560" height="1218"><figcaption>Candy — the signature look</figcaption></figure>
+          <figure class="shot reveal"><img src="assets/shots/space.webp" alt="StateLess-Cube in the Space theme" loading="lazy" width="560" height="1218"><figcaption>Space — neon on deep purple</figcaption></figure>
+          <figure class="shot reveal"><img src="assets/shots/robots.webp" alt="StateLess-Cube in the Robots and AI theme" loading="lazy" width="560" height="1218"><figcaption>Robots &amp; AI</figcaption></figure>
+          <figure class="shot reveal"><img src="assets/shots/prism.webp" alt="StateLess-Cube in the Prism theme" loading="lazy" width="560" height="1218"><figcaption>Prism — holographic</figcaption></figure>
+          <figure class="shot reveal"><img src="assets/shots/animals.webp" alt="StateLess-Cube in the Animals theme" loading="lazy" width="560" height="1218"><figcaption>Animals</figcaption></figure>
+          <figure class="shot reveal"><img src="assets/shots/pixel.webp" alt="StateLess-Cube in the Pixel theme" loading="lazy" width="560" height="1218"><figcaption>Pixel — arcade</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================ -->
+    <section>
+      <div class="wrap">
+        <div class="head reveal">
+          <h2>How it plays</h2>
+          <p>You already know 2048. That is the point.</p>
+        </div>
+        <div class="steps">
+          <div class="step reveal">
+            <h3>Swipe to move</h3>
+            <p>Drag the board in any direction. Matching icons merge, and a new
+               one drops in.</p>
+          </div>
+          <div class="step reveal">
+            <h3>Chain the merges</h3>
+            <p>Merge again straight away to build a combo — the streak is
+               worth chasing.</p>
+          </div>
+          <div class="step reveal">
+            <h3>Climb to the Cube</h3>
+            <p>Every point moves you up the ladder. Reach the StateLess-Cube
+               and keep going.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================ -->
+    <section id="download">
+      <div class="wrap">
+        <div class="download reveal">
+          <h2 style="font-size:clamp(1.8rem,4.2vw,2.7rem);letter-spacing:-0.035em;margin-bottom:12px">Get StateLess-Cube</h2>
+          <p style="color:var(--muted);max-width:52ch;margin-inline:auto">
+            Free, with no ads and no accounts. The same build, on both
+            platforms.
+          </p>
+          <div class="store-row">
+            <span class="store">
+              <span class="glyph">🍏</span>
+              <span>App Store<small>iOS · coming soon</small></span>
+            </span>
+            <span class="store">
+              <span class="glyph">🤖</span>
+              <span>Google Play<small>Android · coming soon</small></span>
+            </span>
+          </div>
+          <p class="soon">Want it before the stores? The web build is live in
+            the game repository.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================ -->
+    <section class="credits">
+      <div class="wrap">
+        <a class="who reveal" href="https://github.com/StatelessSquad" target="_blank" rel="noopener noreferrer">
+          <img src="assets/icon.png" alt="" width="44" height="44">
+          <span>Developed by StateLess Squad<small>StatelessSquad on GitHub</small></span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>© StateLess Squad — StateLess-Cube</span>
+      <span>
+        <a href="https://github.com/StatelessSquad">GitHub</a> ·
+        <a href="https://github.com/StatelessSquad/StateLessCube-Public">Source of this page</a>
+      </span>
+    </div>
+  </footer>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>
