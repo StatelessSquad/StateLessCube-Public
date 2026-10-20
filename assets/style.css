@@ -22,6 +22,7 @@
   --grad: linear-gradient(120deg, var(--pink), var(--violet) 55%, var(--cyan));
   --radius: 26px;
   --radius-sm: 18px;
+  --radius-pill: 999px;
   --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
   --spring: cubic-bezier(0.34, 1.4, 0.64, 1);
   --max: 1180px;
@@ -327,6 +328,37 @@ h1 {
   background: #000;
   z-index: 2;
   pointer-events: none;
+}
+
+.video-play {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 12px 22px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--border);
+  background: rgba(12, 9, 24, 0.82);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  color: var(--text);
+  font: inherit;
+  font-weight: 700;
+  font-size: 0.92rem;
+  cursor: pointer;
+  box-shadow: 0 16px 34px -16px rgba(0, 0, 0, 0.9);
+}
+
+.video-play[hidden] {
+  display: none;
+}
+
+.video-play:active {
+  transform: translate(-50%, -50%) scale(0.95);
 }
 
 .float {
@@ -804,19 +836,153 @@ footer a:hover {
 
 /* -- reveal on scroll ---------------------------------------------------- */
 
-.reveal {
+/* Only hidden when JavaScript can reveal them again. */
+.js .reveal {
   opacity: 0;
   transform: translateY(22px);
   transition: opacity 700ms var(--ease), transform 700ms var(--spring);
 }
 
-.reveal.in {
+.js .reveal.in {
   opacity: 1;
   transform: none;
 }
 
+/* ==========================================================================
+ * Phone first
+ * ========================================================================== */
+
+@media (max-width: 640px) {
+  .wrap {
+    width: min(100% - 28px, var(--max));
+  }
+
+  section {
+    padding: clamp(44px, 12vw, 70px) 0;
+  }
+
+  /* The phone mockup: straight, not tilted - and as wide as the screen. */
+  .phone {
+    width: min(320px, 88vw);
+    transform: none;
+    border-radius: 40px;
+    padding: 9px;
+  }
+
+  .phone:hover {
+    transform: none;
+  }
+
+  .phone video {
+    border-radius: 32px;
+  }
+
+  .float {
+    display: none;
+  }
+
+  /* Bigger tap targets. */
+  .btn,
+  .store {
+    min-height: 50px;
+  }
+
+  .btn-lg {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .cta-row {
+    gap: 10px;
+  }
+
+  .nav .wrap {
+    height: 58px;
+    gap: 12px;
+  }
+
+  .logo {
+    font-size: 0.95rem;
+  }
+
+  .logo img {
+    width: 28px;
+    height: 28px;
+    border-radius: 9px;
+  }
+
+  /* The gallery: two columns of small previews instead of one tall column. */
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .shot figcaption {
+    padding: 9px 12px;
+    font-size: 0.74rem;
+  }
+
+  /* The store badges go full width so they are easy to tap. */
+  .store-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .store {
+    justify-content: flex-start;
+  }
+
+  .stats {
+    gap: 10px;
+  }
+
+  .stat {
+    padding: 20px 14px;
+  }
+
+  /* One card per row on a phone: two columns makes the text too narrow. */
+  .bento {
+    grid-template-columns: 1fr;
+  }
+
+  .card,
+  .card.wide,
+  .card.tall {
+    grid-column: span 1;
+    grid-row: auto;
+  }
+
+  .card {
+    padding: 22px 20px;
+  }
+
+  .download {
+    border-radius: 26px;
+  }
+
+  footer .wrap {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}
+
+/* Notches and home indicators. */
+.nav {
+  padding-top: env(safe-area-inset-top);
+}
+
+body {
+  padding-left: max(16px, env(safe-area-inset-left));
+  padding-right: max(16px, env(safe-area-inset-right));
+}
+
+footer {
+  padding-bottom: max(40px, env(safe-area-inset-bottom));
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .reveal {
+  .js .reveal {
     opacity: 1;
     transform: none;
     transition: none;

@@ -13,6 +13,12 @@
   <meta property="og:image" content="assets/icon.png">
   <meta name="twitter:card" content="summary_large_image">
 
+  <meta name="theme-color" content="#08060f">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="StateLess-Cube">
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="manifest" href="manifest.webmanifest">
   <link rel="icon" href="assets/favicon.png">
   <link rel="apple-touch-icon" href="assets/icon.png">
   <link rel="stylesheet" href="assets/style.css">
@@ -78,10 +84,15 @@
           <div class="phone">
             <span class="notch" aria-hidden="true"></span>
             <video
-              src="assets/demo.mp4"
-              poster="assets/shots/candy.webp"
-              autoplay muted loop playsinline preload="metadata"
-              aria-label="StateLess-Cube gameplay demo"></video>
+              poster="assets/shots/poster.webp"
+              autoplay muted loop playsinline preload="none"
+              aria-label="StateLess-Cube gameplay demo">
+              <source src="assets/demo-mobile.mp4" media="(max-width: 640px)" type="video/mp4">
+              <source src="assets/demo.mp4" type="video/mp4">
+            </video>
+            <button type="button" class="video-play" id="video-play" hidden aria-label="Play the demo">
+              <span aria-hidden="true">▶</span> Play the demo
+            </button>
           </div>
           <div class="float float-1"><b>🎨</b> 9 icon themes</div>
           <div class="float float-2"><b>🔥</b> Combo streaks</div>

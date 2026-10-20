@@ -8,6 +8,10 @@
 
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  // The reveal animation hides the content with CSS — but only when there is
+  // JavaScript to bring it back. Without it the page would be blank.
+  document.documentElement.classList.add('js');
+
   /* -- reveal on scroll -------------------------------------------------- */
 
   const reveals = document.querySelectorAll('.reveal');
@@ -77,11 +81,26 @@
 
   /* -- the demo video ---------------------------------------------------- */
 
-  // Only load the video when it is close to the viewport: it is a few hundred
-  // kilobytes, but there is no reason to fetch it on a phone that scrolls
-  // past the hero.
   const video = document.querySelector('video');
-  if (video && 'IntersectionObserver' in window) {
+  const playButton = document.getElementById('video-play');
+
+  // A phone that asks to save data (or is on a slow link) gets the poster and
+  // a button, not a video it did not ask for.
+  const conn = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+  const stingy = Boolean(conn && (conn.saveData || /(^|-)2g$/.test(conn.effectiveType || '')));
+
+  if (video && stingy) {
+    video.removeAttribute('autoplay');
+    video.preload = 'none';
+    if (playButton) {
+      playButton.hidden = false;
+      playButton.addEventListener('click', () => {
+        video.preload = 'auto';
+        video.play().then(() => { playButton.hidden = true; }).catch(() => {});
+      });
+    }
+  } else if (video && 'IntersectionObserver' in window) {
+    // Only fetch the video when the hero is close to the viewport.
     const vo = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
