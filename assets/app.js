@@ -1,7 +1,6 @@
 /* StateLess-Cube — product page interactions.
  *
- * Tiny on purpose: a scroll reveal, a count-up for the stats and a pointer
- * glow on the feature cards. No dependencies, no build step.
+ * Tiny on purpose: a scroll reveal, a count-up and lazy video. No dependencies, no build step.
  */
 (function () {
   'use strict';
@@ -65,18 +64,6 @@
     counters.forEach((el) => co.observe(el));
   } else {
     counters.forEach(animate);
-  }
-
-  /* -- pointer glow on the cards ----------------------------------------- */
-
-  if (!reduced && window.matchMedia('(hover: hover)').matches) {
-    document.querySelectorAll('.card').forEach((card) => {
-      card.addEventListener('pointermove', (e) => {
-        const r = card.getBoundingClientRect();
-        card.style.setProperty('--mx', `${e.clientX - r.left}px`);
-        card.style.setProperty('--my', `${e.clientY - r.top}px`);
-      });
-    });
   }
 
   /* -- the demo video ---------------------------------------------------- */

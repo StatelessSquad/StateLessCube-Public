@@ -12,7 +12,7 @@ tracking.
 ```
 index.html              the page
 assets/style.css        the design system
-assets/app.js           reveal, count-up and pointer glow
+assets/app.js           reveal, count-up and the lazy demo video
 assets/demo.mp4         gameplay capture
 assets/shots/*.webp     screenshots
 assets/icon.png         the app icon
