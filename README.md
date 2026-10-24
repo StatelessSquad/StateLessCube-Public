@@ -32,3 +32,7 @@ GitHub Pages, deployed from `main` by `.github/workflows/pages.yml`.
 ## Developed by StateLess Squad
 
 <https://github.com/StatelessSquad>
+
+## License
+
+Proprietary: © 2026 StateLess Squad, all rights reserved. See [LICENSE](LICENSE).
